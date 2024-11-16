@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Blog</title>
+    <!-- Simple lightbox effect for images -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --text-color: #333;
+            --bg-color: #fff;
+            --secondary-bg: #f6f8fa;
+            --border-color: #eee;
+        }
+
+        /* Dark mode colors */
+        [data-theme="dark"] {
+            --primary-color: #58a6ff;
+            --text-color: #c9d1d9;
+            --bg-color: #0d1117;
+            --secondary-bg: #161b22;
+            --border-color: #30363d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--secondary-bg);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        nav a:hover {
+            background-color: var(--border-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin: 2rem auto;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .post {
+            background-color: var(--secondary-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            color: #586069;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+        }
+
+        .widget {
+            background-color: var(--secondary-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .comments {
+            margin-top: 2rem;
+        }
+
+        .comment {
+            background-color: var(--secondary-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .comment-form {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        footer {
+            background-color: var(--secondary-bg);
+            padding: 2rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .search-form input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>My GitHub Blog</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="posts.html">Posts</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="content">
+                <article class="post">
+                    <h2><a href="post.html" class="post-title">Getting Started with GitHub Pages</a></h2>
+                    <div class="post-meta">
+                        <span>November 16, 2024</span>
+                        <span>By Admin</span>
+                        <span>5 min read</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Web Development</span>
+                        <span class="tag">Tutorial</span>
+                    </div>
+                    <p>Learn how to create and host your own blog using GitHub Pages. We'll cover everything from setting up your repository to customizing your theme and adding dynamic features.</p>
+                    <a href="post.html" class="button">Read More</a>
+
+                    <div class="comments">
+                        <h3>Comments (2)</h3>
+                        <div class="comment">
+                            <div class="post-meta">
+                                <strong>John Doe</strong>
+                                <span>2 hours ago</span>
+                            </div>
+                            <p>Great tutorial! Really helped me understand GitHub Pages better.</p>
+                        </div>
+                        <div class="comment">
+                            <div class="post-meta">
+                                <strong>Jane Smith</strong>
+                                <span>5 hours ago</span>
+                            </div>
+                            <p>Thanks for sharing! Looking forward to more content like this.</p>
+                        </div>
+
+                        <form class="comment-form">
+                            <textarea placeholder="Write your comment..." rows="4"></textarea>
+                            <button type="submit" class="button">Post Comment</button>
+                        </form>
+                    </div>
+                </article>
+
+                <div class="pagination">
+                    <a href="#" class="button">← Previous</a>
+                    <a href="#" class="button">Next →</a>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3>Search</h3>
+                    <form class="search-form">
+                        <input type="search" placeholder="Search posts...">
+                        <button type="submit" class="button">🔍</button>
+                    </form>
+                </div>
+
+                <div class="widget">
+                    <h3>Categories</h3>
+                    <nav>
+                        <a href="#">Technology (5)</a>
+                        <a href="#">Tutorial (3)</a>
+                        <a href="#">Web Development (4)</a>
+                        <a href="#">GitHub (2)</a>
+                    </nav>
+                </div>
+
+                <div class="widget">
+                    <h3>Recent Posts</h3>
+                    <nav>
+                        <a href="#">Getting Started with GitHub Pages</a>
+                        <a href="#">How to Add Comments to Your Blog</a>
+                        <a href="#">Customizing Your Blog Theme</a>
+                    </nav>
+                </div>
+
+                <div class="widget">
+                    <h3>Tags</h3>
+                    <div class="tags">
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Web</span>
+                        <span class="tag">Tutorial</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">HTML</span>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <h3>About</h3>
+                <p>A personal blog about web development, programming, and technology.</p>
+            </div>
+            <div>
+                <h3>Links</h3>
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">RSS Feed</a>
+                </nav>
+            </div>
+            <div>
+                <h3>Connect</h3>
+                <nav>
+                    <a href="https://github.com/yourusername">GitHub</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <p style="text-align: center; margin-top: 2rem;">© 2024 My GitHub Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <script>
+        // Dark mode toggle
+        function toggleTheme() {
+            const body = document.body;
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+        }
+
+        // Initialize lightbox for images
+        new SimpleLightbox('.post img', {});
+    </script>
+</body>
+</html>
