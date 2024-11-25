@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow with Named Navigation Buttons</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .slideshow-container { position: relative; max-width: 1000px; margin: auto; }
+        .slides { display: none; }
+        img { width: 100%; vertical-align: middle; }
+        .prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; margin-top: -22px; padding: 16px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; }
+        .next { right: 0; border-radius: 3px 0 0 3px; }
+        .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+        .caption { color: #f2f2f2; font-size: 15px; padding: 8px 12px; position: absolute; bottom: 8px; width: 100%; text-align: center; }
+        .navigation { text-align: center; margin-top: 20px; }
+        .navigation button { cursor: pointer; padding: 10px 20px; margin: 5px; border: none; background-color: #f2f2f2; font-size: 16px; border-radius: 5px; transition: background-color 0.3s; }
+        .navigation button.active, .navigation button:hover { background-color: #ddd; }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+    <div class="slides">
+        <img src="https://via.placeholder.com/1000x400?text=Slide+1" alt="Slide 1">
+        <div class="caption">Caption for Slide 1</div>
+    </div>
+
+    <div class="slides">
+        <img src="https://via.placeholder.com/1000x400?text=Slide+2" alt="Slide 2">
+        <div class="caption">Caption for Slide 2</div>
+    </div>
+
+    <div class="slides">
+        <img src="https://via.placeholder.com/1000x400?text=Slide+3" alt="Slide 3">
+        <div class="caption">Caption for Slide 3</div>
+    </div>
+
+</div>
+
+<div class="navigation">
+    <button onclick="currentSlide(1)" class="nav-button">Slide 1</button>
+    <button onclick="currentSlide(2)" class="nav-button">Slide 2</button>
+    <button onclick="currentSlide(3)" class="nav-button">Slide 3</button>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("slides");
+        const buttons = document.getElementsByClassName("nav-button");
+        
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        for (i = 0; i < buttons.length; i++) {
+            buttons[i].className = buttons[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        buttons[slideIndex - 1].className += " active";
+    }
+</script>
+
+</body>
+</html>
