@@ -1,6 +1,8 @@
 <html>
   <head>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" href="style.css">
+
     <link
       rel="stylesheet"
       as="style"
@@ -60,30 +62,72 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-        <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dbe7] bg-slate-50 p-4 flex-col">
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0"
-            style='background-image: url("https://cdn.usegalileo.ai/stability/81bbff58-845e-4924-ba0e-e190f8ca7bd2.png");'
-          ></div>
-          <div class="flex flex-col gap-1">
-            <a href="pieceofflesh.html">
-            <h2 class="text-[#0e141b] text-base font-bold leading-tight">Read the latest poetry</h2>
-            <p class="text-[#4e7397] text-sm font-normal leading-normal">few posts</p>
-            </a>
-          </div>
-        </div>
-        <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dbe7] bg-slate-50 p-4 flex-col">
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0"
-            style='background-image: url("https://cdn.usegalileo.ai/stability/2f6b3c50-2521-45c5-a06f-56d0573d734d.png");'
-          ></div>
-          <div class="flex flex-col gap-1">
-            <h2 class="text-[#0e141b] text-base font-bold leading-tight">Explore articles</h2>
-            <p class="text-[#4e7397] text-sm font-normal leading-normal">2 posts</p>
-          </div>
-        </div>
+     <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+  <!-- Journal Card -->
+  <a href="journal.html" class="group">
+    <div class="card">
+      <div
+        class="card-image"
+        style="background-image: url('https://cdn.usegalileo.ai/stability/81bbff58-845e-4924-ba0e-e190f8ca7bd2.png');"
+        role="img"
+        aria-label="Journal cover image"
+      ></div>
+      <div class="card-content">
+        <h2 class="card-title">Read the journals</h2>
+        <p class="card-description">Dig into details</p>
       </div>
+    </div>
+  </a>
+
+  <!-- Poetry Card -->
+  <a href="poetry.html" class="group">
+    <div class="card">
+      <div
+        class="card-image"
+        style="background-image: url('https://cdn.usegalileo.ai/stability/2f6b3c50-2521-45c5-a06f-56d0573d734d.png');"
+        role="img"
+        aria-label="Poetry list image"
+      ></div>
+      <div class="card-content">
+        <h2 class="card-title">Go back to poem's list</h2>
+        <p class="card-description">Read more</p>
+      </div>
+    </div>
+  </a>
+
+  <!-- About Card -->
+  <a href="about.html" class="group">
+    <div class="card">
+      <div
+        class="card-image"
+        style="background-image: url('https://cdn.usegalileo.ai/stability/81bbff58-845e-4924-ba0e-e190f8ca7bd2.png');"
+        role="img"
+        aria-label="About the author image"
+      ></div>
+      <div class="card-content">
+        <h2 class="card-title">Know about the author</h2>
+        <p class="card-description">Contact us</p>
+      </div>
+    </div>
+  </a>
+
+  <!-- Pleasant Lies Card -->
+  <a href="pleasantlies.html" class="group">
+    <div class="card">
+      <div
+        class="card-image"
+        style="background-image: url('pleasantlies.jpg');"
+        role="img"
+        aria-label="Pleasant lies cover image"
+      ></div>
+      <div class="card-content">
+        <h2 class="card-title">Pleasant lies</h2>
+        <p class="card-description">Little lies we tell ourselves</p>
+      </div>
+    </div>
+  </a>
+</div>
+
       <div class="flex p-4 @container">
         <div class="flex w-full flex-col gap-4 items-center">
           <div class="flex gap-4 flex-col items-center">
