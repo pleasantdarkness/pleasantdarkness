@@ -1,14 +1,13 @@
 <html>
   <head>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" href="styles.css">
     <link
       rel="stylesheet"
       as="style"
       onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
     />
-
-
 <title>Pleasant Darkness</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
@@ -76,114 +75,73 @@
         I love to write about the extreme flow of emotions the human mind creates, the game of feelings our brain plays within, and the pain the heart holds. <br>
           I'm Chhaya, I love to write to ease my mind and I feel that there are many things that our extreme emotions may hold. They can only be understood if expressed, a emotion, a secret, a confession, and a pain if left unsaid, creates a wound that take years to be buried only to drag you again in the six feet hole.
         </p>
+
         <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-        <a href="journal.html">
-        <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dbe7] bg-slate-50 p-4 flex-col">
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0"
-            style='background-image: url("https://cdn.usegalileo.ai/stability/81bbff58-845e-4924-ba0e-e190f8ca7bd2.png");'
-          ></div>
-         
-          <div class="flex flex-col gap-1">
-            <h2 class="text-[#0e141b] text-base font-bold leading-tight">Read the journals</h2>
-            <p class="text-[#4e7397] text-sm font-normal leading-normal">dig into details</p>
-          </div>
-        
-        </div>
-        </a>
-        <a href="poetry.html">
-        <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dbe7] bg-slate-50 p-4 flex-col">
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0"
-            style='background-image: url("https://cdn.usegalileo.ai/stability/2f6b3c50-2521-45c5-a06f-56d0573d734d.png");'
-          ></div>
-          <div class="flex flex-col gap-1">
-            <h2 class="text-[#0e141b] text-base font-bold leading-tight">Go back to poem's list</h2>
-            <p class="text-[#4e7397] text-sm font-normal leading-normal">Read more</p>
-          </div>
-        </div>
-        </a>
+  <!-- Journal Card -->
+  <a href="journal.html" class="group">
+    <div class="card">
+      <div
+        class="card-image"
+        style="background-image: url('https://cdn.usegalileo.ai/stability/81bbff58-845e-4924-ba0e-e190f8ca7bd2.png');"
+        role="img"
+        aria-label="Journal cover image"
+      ></div>
+      <div class="card-content">
+        <h2 class="card-title">Read the journals</h2>
+        <p class="card-description">Dig into details</p>
       </div>
-     <a href="about.html">
-      <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-        <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dbe7] bg-slate-50 p-4 flex-col">
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0"
-            style='background-image: url("https://cdn.usegalileo.ai/stability/81bbff58-845e-4924-ba0e-e190f8ca7bd2.png");'
-          ></div>
-          <div class="flex flex-col gap-1">
-            <h2 class="text-[#0e141b] text-base font-bold leading-tight">Know about the author</h2>
-            <p class="text-[#4e7397] text-sm font-normal leading-normal">contact us</p>
-          </div>
-        </div>
-     </a>
-        <a href="articles.html">
-        <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dbe7] bg-slate-50 p-4 flex-col">
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0"
-            style='background-image: url("https://cdn.usegalileo.ai/stability/2f6b3c50-2521-45c5-a06f-56d0573d734d.png");'
-          ></div>
-          <div class="flex flex-col gap-1">
-            <h2 class="text-[#0e141b] text-base font-bold leading-tight">Explore articles</h2>
-            <p class="text-[#4e7397] text-sm font-normal leading-normal">see us</p>
-          </div>
-        </div>
-        </a>
+    </div>
+  </a>
+
+  <!-- Poetry Card -->
+  <a href="poetry.html" class="group">
+    <div class="card">
+      <div
+        class="card-image"
+        style="background-image: url('https://cdn.usegalileo.ai/stability/2f6b3c50-2521-45c5-a06f-56d0573d734d.png');"
+        role="img"
+        aria-label="Poetry list image"
+      ></div>
+      <div class="card-content">
+        <h2 class="card-title">Go back to poem's list</h2>
+        <p class="card-description">Read more</p>
       </div>
-      <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-        <a href="pleasantlies.html">
-        <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dbe7] bg-slate-50 p-4 flex-col">
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0"
-            style='background-image: url("pleasantlies.jpg");'
-          ></div>
-         
-          <div class="flex flex-col gap-1">
-            <h2 class="text-[#0e141b] text-base font-bold leading-tight">Pleasant lies</h2>
-            <p class="text-[#4e7397] text-sm font-normal leading-normal">little lies we tell ourselvesp>
-          </div>
-        
-        </div>
-        </a>
-        <a href="index.html">
-        <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dbe7] bg-slate-50 p-4 flex-col">
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0"
-            style='background-image: url("https://cdn.usegalileo.ai/stability/2f6b3c50-2521-45c5-a06f-56d0573d734d.png");'
-          ></div>
-          <div class="flex flex-col gap-1">
-            <h2 class="text-[#0e141b] text-base font-bold leading-tight">Visit the home page</h2>
-            <p class="text-[#4e7397] text-sm font-normal leading-normal">Read more</p>
-          </div>
-        </div>
-        </a>
+    </div>
+  </a>
+
+  <!-- About Card -->
+  <a href="about.html" class="group">
+    <div class="card">
+      <div
+        class="card-image"
+        style="background-image: url('https://cdn.usegalileo.ai/stability/81bbff58-845e-4924-ba0e-e190f8ca7bd2.png');"
+        role="img"
+        aria-label="About the author image"
+      ></div>
+      <div class="card-content">
+        <h2 class="card-title">Know about the author</h2>
+        <p class="card-description">Contact us</p>
       </div>
-     <a href="Pieceofflesh.html">
-      <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-        <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dbe7] bg-slate-50 p-4 flex-col">
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0"
-            style='background-image: url("pieceof.jpg");'
-          ></div>
-          <div class="flex flex-col gap-1">
-            <h2 class="text-[#0e141b] text-base font-bold leading-tight">Piece of flesh</h2>
-            <p class="text-[#4e7397] text-sm font-normal leading-normal">The feeling after being assaulted</p>
-          </div>
-        </div>
-     </a>
-        <a href="hanging.html">
-        <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dbe7] bg-slate-50 p-4 flex-col">
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0"
-            style='background-image: url("hanging.jpg");'
-          ></div>
-          <div class="flex flex-col gap-1">
-            <h2 class="text-[#0e141b] text-base font-bold leading-tight">I'm dead, hanging</h2>
-            <p class="text-[#4e7397] text-sm font-normal leading-normal">Feeling of being cheated</p>
-          </div>
-        </div>
-        </a>
+    </div>
+  </a>
+
+  <!-- Pleasant Lies Card -->
+  <a href="pleasantlies.html" class="group">
+    <div class="card">
+      <div
+        class="card-image"
+        style="background-image: url('pleasantlies.jpg');"
+        role="img"
+        aria-label="Pleasant lies cover image"
+      ></div>
+      <div class="card-content">
+        <h2 class="card-title">Pleasant lies</h2>
+        <p class="card-description">Little lies we tell ourselves</p>
       </div>
+    </div>
+  </a>
+</div>
+
         <h2 class="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Social Links</h2>
         <div class="flex items-center gap-4 bg-slate-50 px-4 min-h-[72px] py-2 justify-between">
           <div class="flex items-center gap-4">
