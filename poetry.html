@@ -3,106 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore dark-themed poetry, journals, and articles on Pleasant Darkness. A haven for creative expression and introspection.">
-    <meta name="keywords" content="dark poetry, creative writing, journals, introspection, Pleasant Darkness">
-    <meta name="author" content="Pleasant Darkness">
     <title>Pleasant Darkness</title>
-    <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" onload="this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@200;400&family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-900 text-slate-200 font-sans">
-    <header class="sticky top-0 z-50 bg-slate-800/90 shadow-lg">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <a href="#" class="text-2xl font-semibold font-newsreader">Pleasant Darkness</a>
-            <div class="hidden md:flex gap-4">
-                <a href="#about" class="hover:text-slate-400">About</a>
-                <a href="#poetry" class="hover:text-slate-400">Poetry</a>
-                <a href="#articles" class="hover:text-slate-400">Articles</a>
-                <a href="#journal" class="hover:text-slate-400">Journal</a>
-            </div>
-            <button class="md:hidden text-slate-200" aria-label="Open navigation menu">
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-                </svg>
-            </button>
-        </nav>
+<body class="bg-slate-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800 shadow md:px-12">
+        <a href="index.html" class="text-xl font-bold tracking-wide">Pleasant Darkness</a>
+        <ul class="hidden md:flex space-x-6 text-sm font-medium">
+            <li><a href="index.html" class="hover:text-gray-500 border-b-2 border-transparent hover:border-b-gray-500">Home</a></li>
+            <li><a href="poetry.html" class="hover:text-gray-500 border-b-2 border-transparent hover:border-b-gray-500">Poetry</a></li>
+            <li><a href="articles.html" class="hover:text-gray-500 border-b-2 border-transparent hover:border-b-gray-500">Articles</a></li>
+            <li><a href="journal.html" class="hover:text-gray-500 border-b-2 border-transparent hover:border-b-gray-500">Journal</a></li>
+        </ul>
+        <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden px-6 py-4 bg-gray-100 dark:bg-gray-800 md:hidden">
+        <ul class="space-y-4">
+            <li><a href="index.html" class="block text-sm hover:text-gray-500">Home</a></li>
+            <li><a href="poetry.html" class="block text-sm hover:text-gray-500">Poetry</a></li>
+            <li><a href="articles.html" class="block text-sm hover:text-gray-500">Articles</a></li>
+            <li><a href="journal.html" class="block text-sm hover:text-gray-500">Journal</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative bg-cover bg-center h-[50vh] flex items-center justify-center text-center text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-background.jpg');">
+        <h1 class="text-3xl md:text-5xl font-bold">Welcome to Pleasant Darkness</h1>
     </header>
 
-    <main>
-        <section id="hero" class="relative h-[60vh] md:h-screen bg-cover bg-center" style="background-image: url('hero-image.jpg');">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-slate-900 flex flex-col justify-center items-center">
-                <h1 class="text-4xl md:text-6xl font-newsreader font-bold text-slate-100">Welcome to Pleasant Darkness</h1>
-                <p class="mt-4 text-lg md:text-xl text-slate-300 max-w-xl text-center">Explore the depths of poetry, journals, and introspection.</p>
-            </div>
+    <!-- Content Section -->
+    <main class="px-6 py-8 md:px-12">
+        <!-- About Section -->
+        <section class="my-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">About Us</h2>
+            <p class="text-sm md:text-base leading-relaxed">Pleasant Darkness is a sanctuary for dark poetry, introspective journals, and thought-provoking articles. Dive deep into the beauty of the melancholic and the profound.</p>
         </section>
 
-        <section id="about" class="py-16 px-6 sm:px-10 lg:px-20 bg-slate-800">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-newsreader font-semibold">About Us</h2>
-                <p class="mt-6 text-lg text-slate-300">At Pleasant Darkness, we believe in embracing the beauty of shadows. Our blog is a sanctuary for dark-themed poetry, thought-provoking articles, and introspective journals.</p>
-            </div>
-        </section>
-
-        <section id="poetry" class="py-16 bg-slate-900">
-            <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20">
-                <h2 class="text-3xl md:text-4xl font-newsreader font-semibold text-center">Featured Poetry</h2>
-                <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Poetry cards -->
-                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-md">
-                        <img src="poem1.jpg" alt="Poem 1" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold">Poem Title 1</h3>
-                            <p class="text-slate-400 line-clamp-3 mt-2">A snippet of the poem goes here...</p>
-                        </div>
+        <!-- Card Section -->
+        <section class="my-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Explore</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+                    <img src="pieceof.jpg" alt="Piece of Flesh" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Piece of Flesh</h3>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">A vivid dive into the dark recesses of the mind...</p>
                     </div>
-                    <!-- Repeat for more poems -->
                 </div>
-            </div>
-        </section>
-
-        <section id="articles" class="py-16 bg-slate-800">
-            <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20">
-                <h2 class="text-3xl md:text-4xl font-newsreader font-semibold text-center">Latest Articles</h2>
-                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Article cards -->
-                    <div class="bg-slate-700 rounded-lg overflow-hidden shadow-md">
-                        <img src="article1.jpg" alt="Article 1" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold">Article Title 1</h3>
-                            <p class="text-slate-400 line-clamp-3 mt-2">A brief overview of the article goes here...</p>
-                        </div>
+                <!-- Card 2 -->
+                <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+                    <img src="goodmourn.jpg" alt="Good Mourn" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Good Mourn</h3>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">An ode to finding beauty in sorrow...</p>
                     </div>
-                    <!-- Repeat for more articles -->
                 </div>
-            </div>
-        </section>
-
-        <section id="journal" class="py-16 bg-slate-900">
-            <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20">
-                <h2 class="text-3xl md:text-4xl font-newsreader font-semibold text-center">Introspective Journals</h2>
-                <div class="mt-10">
-                    <!-- Journal content -->
-                    <p class="text-slate-300">Explore our collection of journals filled with musings, reflections, and deep dives into the human experience.</p>
+                <!-- Card 3 -->
+                <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+                    <img src="journal.jpg" alt="Poetic Journal" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Poetic Journal</h3>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">A glimpse into the daily musings of a poet...</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-slate-800 py-8">
-        <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 text-center">
-            <p class="text-slate-400">&copy; 2024 Pleasant Darkness. All rights reserved.</p>
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="#" aria-label="Follow on Twitter">
-                    <svg class="w-6 h-6 text-slate-400 hover:text-slate-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M22.46 6c-.77.35-1.59.59-2.46.69.88-.53 1.55-1.37 1.87-2.37-.83.49-1.75.85-2.73 1.04a4.17 4.17 0 0 0-7.15 3.8 11.84 11.84 0 0 1-8.6-4.37 4.18 4.18 0 0 0 1.29 5.57A4.1 4.1 0 0 1 2.8 9.7v.05a4.18 4.18 0 0 0 3.35 4.1c-.48.13-.97.15-1.47.06a4.18 4.18 0 0 0 3.91 2.92A8.4 8.4 0 0 1 2 19.54a11.8 11.8 0 0 0 6.29 1.84c7.55 0 11.67-6.25 11.67-11.67 0-.18 0-.36-.02-.54A8.36 8.36 0 0 0 24 5.28a8.41 8.41 0 0 1-2.46.68 4.19 4.19 0 0 0 1.87-2.3z"></path>
-                    </svg>
-                </a>
-                <!-- Add more social links if necessary -->
+    <!-- Footer -->
+    <footer class="px-6 py-4 bg-gray-800 text-gray-100">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p>&copy; 2024 Pleasant Darkness</p>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/pleasantdarkness.wordpress/" aria-label="Facebook" class="hover:text-blue-500">FB</a>
+                <a href="#" aria-label="Twitter" class="hover:text-blue-400">TW</a>
+                <a href="#" aria-label="Instagram" class="hover:text-pink-500">IG</a>
             </div>
         </div>
     </footer>
+
+    <!-- Script to toggle mobile menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
+
