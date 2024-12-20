@@ -38,8 +38,31 @@
 footer a div:hover {
     text-shadow: 0 0 12px rgba(255, 223, 0, 0.8); /* Bright gold glow on hover */
 }
+         
+        /* Card hover effect */
+        .my-8 .grid div {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
+        .my-8 .grid div:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adding shadow on hover */
+        }
 
+        .my-8 .grid div a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .my-8 .grid div:hover a h3 {
+            color: #ff5722; /* Change text color of title on hover */
+            text-shadow: 0 0 10px #ff5722; /* Glowing effect on title */
+        }
+
+        .my-8 .grid div:hover p {
+            color: #ff5722; /* Change text color of description on hover */
+        }
 
     </style>
 </head>
