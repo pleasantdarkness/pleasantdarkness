@@ -16,12 +16,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
-            background-color: #cdd968 !important; /* copper rose */
+            background-color: #d4f3b7 !important; /* copper rose */
             color: #000 !important; /* White text */
         }
         Header {
             background-attachment: fixed 
         }
+        footer a div:hover {
+    color: #FFD700; /* Gold hover color */
+    transform: scale(1.1); /* Slight zoom effect */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+       footer {
+    background-color: rgba(85, 107, 47, 0.8); /* Dark olive green with 80% opacity */
+    color: #ffffff; /* Text color for contrast */
+    padding: 20px; /* Adjust spacing as needed */
+    text-align: center; /* Align content in the footer */
+}
+
+         footer a div {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Soft glow */
+}
+
+footer a div:hover {
+    text-shadow: 0 0 12px rgba(255, 223, 0, 0.8); /* Bright gold glow on hover */
+}
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 font-sans">
@@ -91,38 +111,17 @@
                 <br>
                 <br>
 
-    <img src="A-woman-in-love2.jpg"  <br>
+    <img src="A-woman-in-love2.jpg"
          alt="I couldn't say a word, I wish I couldn't understand her" 
          style="display: inline-block; margin: 0 10px; max-width: 1200px; height: auto;" 
          width="300" height="200" loading="lazy"><br>
-        A woman if treated right, can give you the world, and a woman if pushed into misary, can destroy the world but you.
+        A woman if treated right, can give you the world, and a woman if pushed into misery, can destroy the world but you.
 
               </p>
             </div>
         </div>
 
-         <!-- Content Section -->
-     <div class="flex p-4 @container">
-          <div class="flex w-full flex-col gap-4 items-center">
-            <div class="flex gap-4 flex-col items-center">
-              <div
-                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
-                style='background-image: url("icon.jpg");'
-              ></div>
-              <div class="flex flex-col items-center justify-center justify-center">
-                <p class="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Pleasant Darkness</p>
-                <p class="text-[#4e7397] text-base font-normal leading-normal text-center">Chhaya- Maybe a writer or a poet.</p>
-              </div>
-            </div>
-              <a href="poetry.html"
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] grow"
-            >
-              <span class="truncate">Go back to poem's list</span>
-            </button>
-              </a>
-          </div>
-     </div>
+
                      <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
                 <!-- Journal Card -->
                 <a href="journal.html" class="group">
@@ -191,6 +190,30 @@
         
         </section>
     </main>
+<footer
+             <!-- Content Section -->
+     <div class="flex p-4 @container">
+          <div class="flex w-full flex-col gap-4 items-center">
+            <div class="flex gap-4 flex-col items-center">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+                style='background-image: url("icon.jpg");'
+              ></div>
+              <div class="flex flex-col items-center justify-center justify-center">
+                <p class="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Pleasant Darkness</p>
+                <p class="text-[#4e7397] text-base font-normal leading-normal text-center">Chhaya- Maybe a writer or a poet.</p>
+              </div>
+            </div>
+              <a href="poetry.html"
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] grow"
+            >
+              <span class="truncate">Go back to poem's list</span>
+            </button>
+              </a>
+          </div>
+     </div>
+</footer>
  <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
           <div class="flex flex-wrap justify-center gap-4">
             <a href="https://x.com/pleasantdarkns/">
