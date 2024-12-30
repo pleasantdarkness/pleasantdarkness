@@ -32,11 +32,10 @@
 .card-title {
     font-size: 1rem;
     font-weight: bold;
-    color: #F2E7FE; /* Soft off-white with a slight purple tint for better contrast */
+    color: #F1F1F1; /* Light gray */
 }
 
 .card-description {
     font-size: 0.875rem;
-    color: #B3A4C6; /* Muted lavender-gray for a softer, elegant look */
+    color: #CFCFCF; /* Subtle gray */
 }
-
