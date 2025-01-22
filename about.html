@@ -1,66 +1,104 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link rel="stylesheet" href="style.css">
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
-    <style>
-        .about-section {
-    background-color: #C19A6B; /* Camel color */
-    padding: 20px; /* Optional: Adds spacing inside the container */
+    <title>Pleasant Darkness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@200;400&family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+   <title>Pleasant Darkness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+     <style>
+      body {
+            background-color: #C5C6C7 !important; /* Roman coffee */
+            color: #000 !important; /* White text */
+        }
+        Header {
+            background-attachment: fixed 
+        }
+         footer a div:hover {
+    color: #FFD700; /* Gold hover color */
+    transform: scale(1.1); /* Slight zoom effect */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+     
+footer {
+    background-color: rgba(54, 69, 79, 0.8); /* Charcoal color with 80% opacity */
+    color: #ffffff; /* Text color for contrast */
+    padding: 20px; /* Adjust spacing as needed */
+    text-align: center; /* Align content in the footer */
+}
+
+
+         footer a div {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Soft glow */
+}
+
+footer a div:hover {
+    text-shadow: 0 0 12px rgba(255, 223, 0, 0.8); /* Bright gold glow on hover */
+}
+         
+        /* Card hover effect */
+        .my-8 .grid div {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .my-8 .grid div:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adding shadow on hover */
+        }
+
+        .my-8 .grid div a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .my-8 .grid div:hover a h3 {
+            color: #ff5722; /* Change text color of title on hover */
+            text-shadow: 0 0 10px #ff5722; /* Glowing effect on title */
+        }
+
+        .my-8 .grid div:hover p {
+            color: #ff5722; /* Change text color of description on hover */
+        }
+
     </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800 shadow md:px-12">
+        <a href="index.html" class="text-xl font-bold tracking-wide">Pleasant Darkness</a>
+        <ul class="hidden md:flex space-x-6 text-sm font-medium">
+            <li><a href="index.html" class="hover:text-gray-500 border-b-2 border-transparent hover:border-b-gray-500">Home</a></li>
+            <li><a href="poetry.html" class="hover:text-gray-500 border-b-2 border-transparent hover:border-b-gray-500">Poetry</a></li>
+            <li><a href="journal.html" class="hover:text-gray-500 border-b-2 border-transparent hover:border-b-gray-500">Journal</a></li>
+            <li><a href="about.html" class="hover:text-gray-500 border-b-2 border-transparent hover:border-b-gray-500">About</a></li>
+        </ul>
+        <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+    </nav>
 
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
-<title>Pleasant Darkness</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden px-6 py-4 bg-gray-100 dark:bg-gray-800 md:hidden">
+        <ul class="space-y-4">
+            <li><a href="index.html" class="block text-sm hover:text-gray-500">Home</a></li>
+            <li><a href="poetry.html" class="block text-sm hover:text-gray-500">Poetry</a></li>
+            <li><a href="journal.html" class="block text-sm hover:text-gray-500">Journal</a></li>
+            <li><a href="about.html" class="block text-sm hover:text-gray-500">About</a></li>
+        </ul>
+    </div>
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
-      <a href="index.html">
-      <div class="flex items-center bg-slate-50 p-4 pb-2 justify-between">
-        <h2 class="text-[#0e141b] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12">Pleasant Darkness</h2>
-        <div class="flex w-12 items-center justify-end">
-          <button
-            class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-[#0e141b] gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
-          >
-            <div class="text-[#0e141b]" data-icon="ShoppingCart" data-size="24px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"
-                ></path>
-              </svg>
-            </div>
-          </button>
-        </div>
-      
-      </div>
-      <div class="pb-3">
-        <div class="flex border-b border-[#d0dbe7] px-4 gap-8">
-          <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#1980e6] text-[#0e141b] pb-[13px] pt-4" href="about.html">
-            <p class="text-[#0e141b] text-sm font-bold leading-normal tracking-[0.015em]">About</p>
-          </a>
-          <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7397] pb-[13px] pt-4" href="poetry.html">
-            <p class="text-[#4e7397] text-sm font-bold leading-normal tracking-[0.015em]">Poetry</p>
-          </a>
-          <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7397] pb-[13px] pt-4" href="articles.html">
-            <p class="text-[#4e7397] text-sm font-bold leading-normal tracking-[0.015em]">Articles</p>
-          </a>
-          <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7397] pb-[13px] pt-4" href="journal.html">
-            <p class="text-[#4e7397] text-sm font-bold leading-normal tracking-[0.015em]">Journal</p>
-          </a>
-        </div>
-      </div>
+    <!-- Hero Section -->
+    <header class="relative bg-cover bg-center h-[50vh] flex items-center justify-center text-center text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bgpic3.jpg');">
+        <h1 class="text-3xl md:text-5xl font-bold">Pleasant Darkness</h1>
+    </header>
+
+
+    <main class="px-6 py-8 md:px-12">
+        <!-- About Section -->
         <div class="flex p-4 @container">
           <div class="flex w-full flex-col gap-4 items-center">
             <div class="flex gap-4 flex-col items-center">
@@ -69,204 +107,194 @@
                 style='background-image: url("https://pleasantdarkness.wordpress.com/wp-content/uploads/2024/11/bhumi-chhaya.jpg");'
               ></div>
               <div class="flex flex-col items-center justify-center justify-center">
-                <p class="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Pleasant Darkness</p>
-                <p class="text-[#4e7397] text-base font-normal leading-normal text-center">Chhaya- Maybe a writer or a poet.</p>
+                <p class="text-[#000] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Pleasant Darkness</p>
+                <p class="text-[#000] text-base font-normal leading-normal text-center">Chhaya- Maybe a writer or a poet.</p>
               </div>
             </div>
+            <a href="about.html"
+      <button
+        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] grow"
+      >
+        <span class="truncate">Portfolio</span>
+      </button>
+            </a>
+        <h2 class="text-[#000000] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Know us a little more</h2>
+        <p class="text-[#000000] text-base font-normal leading-normal pb-3 pt-1 px-4">
+            Pleasant Darkness explains the beauty of darkness within, the darkness that echoes in your mind and whispers in your ears, that feels like a scream that nobody can hear.
+            I love to write about the extreme flow of emotions the human mind creates, the game of feelings our brain plays within, and the pain the heart holds.
+            I'm Chhaya, I love to write to ease my mind and I feel that there are many things that our extreme emotions may hold. They can only be understood if expressed, a emotion, a secret, a confession, and a pain if left unsaid, creates a wound that take years to be buried only to drag you again in the six feet hole.<br>
+            All the articles, poetries or journals on this website is not stolen from any other platform or you may see it on my platforms only.<br>
+          
+        </p>
+        
+        <!-- Card Section -->
+
+        <!-- Card Section -->
+<section class="my-8">
+    <h2 class="text-xl md:text-2xl font-bold mb-4">Dark Poetries here...</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+            <a href="pieceofflesh.html">
+                <img src="pieceof.jpg" alt="Piece of Flesh" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">Piece of Flesh</h3>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">A vivid dive into the dark recesses of the mind...</p>
+                </div>
+            </a>
+        </div>
+        <!-- Card 2 -->
+        <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+            <a href="hanging.html">
+                <img src="hanging.jpg" alt="Hanging" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">Hanging</h3>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">A tale of cheating and betrayal</p>
+                </div>
+            </a>
+        </div>
+        <!-- Card 3 -->
+        <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+            <a href="pleasantlies.html">
+                <img src="pleasantlies.jpg" alt="Pleasant lies" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">Pleasant lies</h3>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">little lies we tell ourselves...</p>
+                </div>
+            </a>
+        </div>
+    </div>
+<br>
+          <h2 class="text-xl md:text-2xl font-bold mb-4">Journals and Articles</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Card 1 -->
+              <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+                  <a href="the-terror-of-love.html">
+                      <img src="the-terror-of-love.jpg" alt="Piece of Flesh" class="w-full h-48 object-cover rounded-t-lg">
+                      <div class="p-4">
+                          <h3 class="font-bold text-lg">The terror of love</h3>
+                          <p class="text-sm text-gray-700 dark:text-gray-300">Watching my world shattering, and I'm letting it to.</p>
+                      </div>
+                  </a>
+              </div>
+              <!-- Card 2 -->
+              <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+                  <a href="A-woman-in-love.html">
+                      <img src="A-woman-in-love.jpg" alt="Hanging" class="w-full h-48 object-cover rounded-t-lg">
+                      <div class="p-4">
+                          <h3 class="font-bold text-lg">A woman in love</h3>
+                          <p class="text-sm text-gray-700 dark:text-gray-300">I couldn't say a word, I wish I could understand her a little less.</p>
+                      </div>
+                  </a>
+              </div>
+              <!-- Card 3 -->
+              <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+                  <a href="the-random-realisation.html">
+                      <img src="random-realisation.jpg" alt="Pleasant lies" class="w-full h-48 object-cover rounded-t-lg">
+                      <div class="p-4">
+                          <h3 class="font-bold text-lg">The random realisation</h3>
+                          <p class="text-sm text-gray-700 dark:text-gray-300">>One day we all will realize that we are breaking ourselves and leaving ourselves broken, we are the ones abandoning us</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </section>
+      
+      
+
+    </main>
+    <footer 
+            <!-- Content Section -->
+     <div class="flex p-4 @container">
+          <div class="flex w-full flex-col gap-4 items-center">
+            <div class="flex gap-4 flex-col items-center">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+                style='background-image: url("icon.jpg");'
+              ></div>
+              <div class="flex flex-col items-center justify-center justify-center">
+                <p class="text-[#ffffff] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Pleasant Darkness</p>
+                <p class="text-[#F5F5DC] text-base font-normal leading-normal text-center">Chhaya- Maybe a writer or a poet.</p>
+              </div>
+            </div>
+              <a href="about.html"
             <button
               class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] grow"
             >
-              <span class="truncate">Portfolio</span>
+              <span class="truncate">About us</span>
             </button>
-
+              </a>
           </div>
-        </div>
-        <p class="text-[#0e141b] text-base font-normal leading-normal pb-3 pt-1 px-4">
-          Pleasant Darkness explains the beauty of darkness within, the darkness that echoes in your mind and whispers in your ears, that feels like a scream that nobody can hear. <br>
-          
-        I love to write about the extreme flow of emotions the human mind creates, the game of feelings our brain plays within, and the pain the heart holds. <br>
-          I'm Chhaya, I love to write to ease my mind and I feel that there are many things that our extreme emotions may hold. They can only be understood if expressed, a emotion, a secret, a confession, and a pain if left unsaid, creates a wound that take years to be buried only to drag you again in the six feet hole.
-        </p>
-
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-  <!-- Journal Card -->
-  <a href="journal.html" class="group">
-    <div class="card">
-      <div
-        class="card-image"
-        style="background-image: url('https://cdn.usegalileo.ai/stability/81bbff58-845e-4924-ba0e-e190f8ca7bd2.png');"
-        role="img"
-        aria-label="Journal cover image"
-      ></div>
-      <div class="card-content">
-        <h2 class="card-title">Read the journals</h2>
-        <p class="card-description">Dig into details</p>
-      </div>
-    </div>
-  </a>
-
-  <!-- Poetry Card -->
-  <a href="poetry.html" class="group">
-    <div class="card">
-      <div
-        class="card-image"
-        style="background-image: url('https://cdn.usegalileo.ai/stability/2f6b3c50-2521-45c5-a06f-56d0573d734d.png');"
-        role="img"
-        aria-label="Poetry list image"
-      ></div>
-      <div class="card-content">
-        <h2 class="card-title">Go back to poem's list</h2>
-        <p class="card-description">Read more</p>
-      </div>
-    </div>
-  </a>
-
-  <!-- About Card -->
-  <a href="about.html" class="group">
-    <div class="card">
-      <div
-        class="card-image"
-        style="background-image: url('https://cdn.usegalileo.ai/stability/81bbff58-845e-4924-ba0e-e190f8ca7bd2.png');"
-        role="img"
-        aria-label="About the author image"
-      ></div>
-      <div class="card-content">
-        <h2 class="card-title">Know about the author</h2>
-        <p class="card-description">Contact us</p>
-      </div>
-    </div>
-  </a>
-
-  <!-- Pleasant Lies Card -->
-  <a href="pleasantlies.html" class="group">
-    <div class="card">
-      <div
-        class="card-image"
-        style="background-image: url('pleasantlies.jpg');"
-        role="img"
-        aria-label="Pleasant lies cover image"
-      ></div>
-      <div class="card-content">
-        <h2 class="card-title">Pleasant lies</h2>
-        <p class="card-description">Little lies we tell ourselves</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-        <h2 class="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Social Links</h2>
-       
-        <div class="flex flex-col gap-4 bg-[#f8fafc] px-4 py-2">
-  <!-- Facebook -->
-  <div class="flex items-center justify-between gap-4 min-h-[72px] bg-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-    <div class="flex items-center gap-4">
-      <a href="https://www.facebook.com/pleasantdarkness.wordpress/">
-        <div class="text-[#0e141b] flex items-center justify-center rounded-lg bg-emerald-300/30 shrink-0 w-12 h-12">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-            <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
-          </svg>
-        </div>
-      </a>
-      <div>
-        <a href="https://www.facebook.com/pleasantdarkness.wordpress/" class="block text-[#0e141b] text-base font-semibold">Facebook</a>
-        <a href="https://www.facebook.com/pleasantdarkness.wordpress/" class="block text-[#4e7397] text-sm">@pleasantdarkness</a>
-      </div>
-    </div>
-    <a href="https://www.facebook.com/pleasantdarkness.wordpress/" class="flex items-center text-[#0e141b]">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-        <path d="M137.54,186.36a8,8,0,0,1,0,11.31l-9.94,10A56,56,0,0,1,48.38,128.4L72.5,104.28A56,56,0,0,1,149.31,102a8,8,0,1,1-10.64,12,40,40,0,0,0-54.85,1.63L59.7,139.72a40,40,0,0,0,56.58,56.58l9.94-9.94A8,8,0,0,1,137.54,186.36Zm70.08-138a56.08,56.08,0,0,0-79.22,0l-9.94,9.95a8,8,0,0,0,11.32,11.31l9.94-9.94a40,40,0,0,1,56.58,56.58L172.18,140.4A40,40,0,0,1,117.33,142,8,8,0,1,0,106.69,154a56,56,0,0,0,76.81-2.26l24.12-24.12A56.08,56.08,0,0,0,207.62,48.38Z"></path>
-      </svg>
-    </a>
-  </div>
-
-  <!-- Instagram -->
-  <div class="flex items-center justify-between gap-4 min-h-[72px] bg-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-    <div class="flex items-center gap-4">
-      <a href="https://www.instagram.com/pleasant.darkness/">
-        <div class="text-[#0e141b] flex items-center justify-center rounded-lg bg-emerald-300/30 shrink-0 w-12 h-12">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-            <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
-          </svg>
-        </div>
-      </a>
-      <div>
-        <a href="https://www.instagram.com/pleasant.darkness/" class="block text-[#0e141b] text-base font-semibold">Instagram</a>
-        <a href="https://www.instagram.com/pleasant.darkness/" class="block text-[#4e7397] text-sm">@pleasant.darkness</a>
-      </div>
-    </div>
-    <a href="https://www.instagram.com/pleasant.darkness/" class="flex items-center text-[#0e141b]">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-        <path d="..."></path>
-      </svg>
-    </a>
-  </div>
-  
-  <!-- Repeat similar blocks for Twitter, Reddit, and YouTube -->
-</div>
-
-        <h2 class="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Portfolio</h2>
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-          <div class="flex flex-col gap-3">
-           
+     </div>
+    </footer>
+ <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://x.com/pleasantdarkns/">
+              <div class="text-[#ffffff]" data-icon="FacebookLogo" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+            <a href="https://x.com/pleasantdarkns/">
+              <div class="text-[#ffffff]" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/pleasant.darkness/">
+              <div class="text-[#ffffff]" data-icon="InstagramLogo" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+            <a href="https://www.reddit.com/user/pleasantdarkns/">
+              <div class="text-[#ffffff]" data-icon="RedditLogo" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M248,104a32,32,0,0,0-52.94-24.19c-16.75-8.9-36.76-14.28-57.66-15.53l5.19-31.17,17.72,2.72a24,24,0,1,0,2.87-15.74l-26-4a8,8,0,0,0-9.11,6.59L121.2,64.16c-21.84.94-42.82,6.38-60.26,15.65a32,32,0,0,0-42.59,47.74A59,59,0,0,0,16,144c0,21.93,12,42.35,33.91,57.49C70.88,216,98.61,224,128,224s57.12-8,78.09-22.51C228,186.35,240,165.93,240,144a59,59,0,0,0-2.35-16.45A32.16,32.16,0,0,0,248,104ZM184,24a8,8,0,1,1-8,8A8,8,0,0,1,184,24Zm40.13,93.78a8,8,0,0,0-3.29,10A43.58,43.58,0,0,1,224,144c0,16.53-9.59,32.27-27,44.33C178.67,201,154.17,208,128,208s-50.67-7-69-19.67C41.59,176.27,32,160.53,32,144a43.75,43.75,0,0,1,3.14-16.17,8,8,0,0,0-3.27-10A16,16,0,1,1,52.94,94.59a8,8,0,0,0,10.45,2.23l.36-.22C81.45,85.9,104.25,80,128,80h0c23.73,0,46.53,5.9,64.23,16.6l.42.25a8,8,0,0,0,10.39-2.26,16,16,0,1,1,21.07,23.19ZM88,144a16,16,0,1,1,16-16A16,16,0,0,1,88,144Zm96-16a16,16,0,1,1-16-16A16,16,0,0,1,184,128Zm-16.93,44.25a8,8,0,0,1-3.32,10.82,76.18,76.18,0,0,1-71.5,0,8,8,0,1,1,7.5-14.14,60.18,60.18,0,0,0,56.5,0A8,8,0,0,1,167.07,172.25Z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@PleasantDarkness">
+              <div class="text-[#ffffff]" data-icon="YoutubeLogo" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
           </div>
+          <p class="text-[#ffff31] text-base font-normal leading-normal">© writerbhumi</p>
+        </footer>
+    <!-- Footer -->
+    <footer class="px-6 py-4 bg-gray-800 text-gray-100">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p>&copy; 2024 Pleasant Darkness</p>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/pleasantdarkness.wordpress/" aria-label="Facebook" class="hover:text-blue-500">FB</a>
+                <a href="#" aria-label="Twitter" class="hover:text-blue-400">TW</a>
+                <a href="#" aria-label="Instagram" class="hover:text-pink-500">IG</a>
+            </div>
         </div>
-      </div>
-      <div>
-        <div class="flex gap-2 border-t border-[#e7edf3] bg-slate-50 px-4 pb-3 pt-2">
-          <a class="just flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-[#0e141b]" href="#">
-            <div class="text-[#0e141b] flex h-8 items-center justify-center" data-icon="House" data-size="24px" data-weight="fill">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"
-                ></path>
-              </svg>
-            </div>
-          </a>
-          <a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#4e7397]" href="#">
-            <div class="text-[#4e7397] flex h-8 items-center justify-center" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
-              </svg>
-            </div>
-          </a>
-          <a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#4e7397]" href="#">
-            <div class="text-[#4e7397] flex h-8 items-center justify-center" data-icon="Bookmark" data-size="24px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Zm0,16V161.57l-51.77-32.35a8,8,0,0,0-8.48,0L72,161.56V48ZM132.23,177.22a8,8,0,0,0-8.48,0L72,209.57V180.43l56-35,56,35v29.14Z"
-                ></path>
-              </svg>
-            </div>
-          </a>
-          <a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#4e7397]" href="#">
-            <div class="text-[#4e7397] flex h-8 items-center justify-center" data-icon="ChatTeardropText" data-size="24px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-12A100.11,100.11,0,0,1,132,224H47.67A15.69,15.69,0,0,1,32,208.33V124a100,100,0,0,1,200,0Zm-16,0a84,84,0,0,0-168,0v84h84A84.09,84.09,0,0,0,216,124Z"
-                ></path>
-              </svg>
-            </div>
-          </a>
-          <a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#4e7397]" href="#">
-            <div class="text-[#4e7397] flex h-8 items-center justify-center" data-icon="User" data-size="24px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
-                ></path>
-              </svg>
-            </div>
-          </a>
-        </div>
-      
-        <div class="flex px-4 py-3">
-          <button
-            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-[#1980e6] text-slate-50 text-base font-bold leading-normal tracking-[0.015em]"
-          >
-            <span class="truncate">Portfolio</span>
-          </button>
-        </div>
-        <div class="h-5 bg-slate-50"></div>
-      </div>
-    </div>
-  </body>
+    </footer>
+
+    <!-- Script to toggle mobile menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
 </html>
