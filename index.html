@@ -47,7 +47,7 @@
     transform: scale(1.1); /* Slight zoom effect */
     transition: color 0.3s ease, transform 0.3s ease;
 }
-         .posts-container {
+ .posts-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px 0;
@@ -82,75 +82,17 @@
     }
   }
   
-  .posts-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
+.post-image {
+  width: 120px;
+  min-width: 120px; /* Prevents shrinking */
+  height: 120px;
+}
   
-  .post-item {
-    display: flex;
-    margin-bottom: 30px;
-    padding: 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .post-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .post-link {
-    display: flex;
-    width: 100%;
-    text-decoration: none;
-    color: inherit;
-    align-items: center; /* Center items vertically */
-  }
-  
-  .post-image {
-    width: 120px; /* Fixed width for the image container */
-    min-width: 120px; /* Prevent shrinking */
-    height: 120px; /* Fixed height to make it square */
-  }
-  
-  .post-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This makes the image cover the container without distortion */
-    border-radius: 6px;
-  }
-  
-  .post-content {
-    flex: 1; /* Take up remaining space */
-    padding: 0 15px;
-  }
-  
-  .post-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  .post-subtitle {
-    color: #666;
-    line-height: 1.4;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .post-link {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    
-    .post-image {
-      margin-bottom: 15px;
-    }
-  }
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
   
   .post-content {
     width: 65%;
@@ -182,7 +124,6 @@
       margin-bottom: 15px;
     }
   }
-     
 footer {
     background-color: rgba(54, 69, 79, 0.8); /* Charcoal color with 80% opacity */
     color: #ffffff; /* Text color for contrast */
@@ -377,79 +318,6 @@ footer a div:hover {
          <div class="posts-container">
   <!-- Posts will be inserted here by JavaScript -->
          </div>         
-                  
-        <!-- Card Section -->
-<section class="my-8">
-    <h2 class="text-xl md:text-2xl font-bold mb-4">Dark Poetries here...</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
-            <a href="pieceofflesh.html">
-                <img src="pieceof.jpg" alt="Piece of Flesh" class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h3 class="font-bold text-lg">Piece of Flesh</h3>
-                    <p class="text-sm text-gray-700 dark:text-gray-300">A vivid dive into the dark recesses of the mind...</p>
-                </div>
-            </a>
-        </div>
-        <!-- Card 2 -->
-        <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
-            <a href="hanging.html">
-                <img src="hanging.jpg" alt="Hanging" class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h3 class="font-bold text-lg">Hanging</h3>
-                    <p class="text-sm text-gray-700 dark:text-gray-300">A tale of cheating and betrayal</p>
-                </div>
-            </a>
-        </div>
-        <!-- Card 3 -->
-        <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
-            <a href="pleasantlies.html">
-                <img src="pleasantlies.jpg" alt="Pleasant lies" class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h3 class="font-bold text-lg">Pleasant lies</h3>
-                    <p class="text-sm text-gray-700 dark:text-gray-300">little lies we tell ourselves...</p>
-                </div>
-            </a>
-        </div>
-    </div>
-<br>
-          <h2 class="text-xl md:text-2xl font-bold mb-4">Journals and Articles</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <!-- Card 1 -->
-              <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
-                  <a href="the-terror-of-love.html">
-                      <img src="the-terror-of-love.jpg" alt="Piece of Flesh" class="w-full h-48 object-cover rounded-t-lg">
-                      <div class="p-4">
-                          <h3 class="font-bold text-lg">The terror of love</h3>
-                          <p class="text-sm text-gray-700 dark:text-gray-300">Watching my world shattering, and I'm letting it to.</p>
-                      </div>
-                  </a>
-              </div>
-              <!-- Card 2 -->
-              <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
-                  <a href="A-woman-in-love.html">
-                      <img src="A-woman-in-love.jpg" alt="Hanging" class="w-full h-48 object-cover rounded-t-lg">
-                      <div class="p-4">
-                          <h3 class="font-bold text-lg">A woman in love</h3>
-                          <p class="text-sm text-gray-700 dark:text-gray-300">I couldn't say a word, I wish I could understand her a little less.</p>
-                      </div>
-                  </a>
-              </div>
-              <!-- Card 3 -->
-              <div class="p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
-                  <a href="the-random-realisation.html">
-                      <img src="random-realisation.jpg" alt="Pleasant lies" class="w-full h-48 object-cover rounded-t-lg">
-                      <div class="p-4">
-                          <h3 class="font-bold text-lg">The random realisation</h3>
-                          <p class="text-sm text-gray-700 dark:text-gray-300">One day we all will realize that we are breaking ourselves and leaving ourselves broken, we are the ones abandoning us</p>
-                      </div>
-                  </a>
-              </div>
-          </div>
-      </section>
-      
-      
 
     </main>
     <footer 
