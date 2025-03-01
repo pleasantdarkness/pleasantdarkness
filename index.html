@@ -47,7 +47,81 @@
     transform: scale(1.1); /* Slight zoom effect */
     transition: color 0.3s ease, transform 0.3s ease;
 }
-        
+         .posts-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .post-item {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+  }
+  
+  .post-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-link {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* For responsive design, we need to modify the post-link as well */
+  @media (max-width: 768px) {
+    .post-link {
+      flex-direction: column;
+    }
+  }
+  
+  .post-image {
+    width: 30%;
+  }
+  
+  .post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .post-content {
+    width: 65%;
+    padding: 0 15px;
+  }
+  
+  .post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .post-subtitle {
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .post-item {
+      flex-direction: column;
+    }
+    
+    .post-image, .post-content {
+      width: 100%;
+    }
+    
+    .post-image {
+      margin-bottom: 15px;
+    }
+  }
      
 footer {
     background-color: rgba(54, 69, 79, 0.8); /* Charcoal color with 80% opacity */
@@ -206,17 +280,17 @@ footer a div:hover {
         <span class="truncate">About us</span>
       </button>
             </a>
-        <h2 class="text-[#000000] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Know us a little more</h2>
+        <h2 class="text-[#000000] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">know us a little more</h2>
         <p class="text-[#000000] text-base font-normal leading-normal pb-3 pt-1 px-4">
-          I'm Chhaya, I love to write to ease my mind and I feel that there are many things that our extreme emotions may hold. They can only be understood if expressed, a emotion, a secret, a confession, and a pain if left unsaid, creates a wound that take years to be buried only to drag you again in the six feet hole. <br>
-          You must be wondering why I chose this name "Pleasant Darkness", there is a long thought behind it, there was a time when I adored the darkness, the peace we get in the dark world, when the world we live in get so cruel that we don't even want to live anymore. The time when we crave the beauty in dark, the peace in chaos, love in pain, and many more unexplainable things. <br>
-          I can't call myself a poet, or a writer, but writing was something that always calmed me down, helped me to go through my nightmare disorder, anxiety and all the problems that seized my mind for a long time. Writing is something that can help you heal, help you express and help you to stay standing when your mind is so occupied that you can't figure out anything straight. <br>
-          There are many situations that I faced, many weird things that I felt, many unexplainable moments I lived in, I won't say I had the worst things happened to me, but I believe there are many people out there who are as confused as I was, who might be feeling the same things that they think nobody can understand. <br>
-          I needed a platform to share how I felt inside, apart from all the things that were going on around, that felt so normal, yet a chaotic war was going on in my mind, that made me restless, week. 
+          I'm Chhaya, I love to write to ease my mind and I feel that there are many things that our extreme emotions may hold. They can only be understood if expressed, an emotion, a secret, a confession, and a pain if left unsaid, creates a wound that takes years to be buried only to drag you again in the six-foot hole. <br>
+          You must be wondering why I chose the name "Pleasant Darkness", there is a long thought behind it, there was a time when I adored the darkness, the peace we get in the dark world, when the world we live in got so cruel that we don't even want to live anymore. The time when we crave beauty in the dark, peace in chaos, love in pain, and many more unexplainable things. <br>
+          I can't call myself a poet, or a writer, but writing was something that always calmed me down, and helped me to go through my nightmare disorder, anxiety, and all the problems that seized my mind for a long time. Writing is something that can help you heal, help you express, and help you stay standing when your mind is so occupied that you can't figure out anything straight. <br>
+          There are many situations that I faced, many weird things that I felt, and many unexplainable moments I lived in, I won't say I had the worst things happen to me, but I believe there are many people out there who are as confused as I was, who might be feeling the same things that they think nobody can understand. <br>
+          I needed a platform to share how I felt inside, apart from all the things that were going on around me that felt so normal, a chaotic war was going on in my mind, that made me restless, and weak. 
          <br> <br>
-          At last, I believe that there are many things that I may did wrong, many confessions to be made, many regrets to be burried with time, but every person deserves somebody who can hear them, just giving a ear to somebody who craved a talk can not be a bad idea.<br>
-          I would appreciate and love to hear your thoughts, confessions, regrets`and all the secrets that occupied your mind, the beautiful or worst experience you had about anything, I would love to hear it all. 
-          <br> You can text me on any of my socials, that are mentioned at the end of the page or can mail me on pdwriterbhumi@gmail.com  <br>
+          At last, I believe that there are many things that I may have done wrong, many confessions to be made, and many regrets to be buried with time, but every person deserves somebody who can hear them, just giving an ear to somebody who craves a talk can not be a bad idea.<br>
+          I would appreciate and love to hear your thoughts, confessions, regrets, and all the secrets that occupied your mind, the beautiful or worst experience you had about anything, I would love to hear it all. 
+          <br> You can text me on any of my socials, that are mentioned at the end of the page or can mail me at pdwriterbhumi@gmail.com  <br>
             or fill out the following contact form :
 
         </p>
@@ -240,11 +314,10 @@ footer a div:hover {
         </form>
     </div>
 
-
-        
-        
-        <!-- Card Section -->
-
+         <div class="posts-container">
+  <!-- Posts will be inserted here by JavaScript -->
+         </div>         
+                  
         <!-- Card Section -->
 <section class="my-8">
     <h2 class="text-xl md:text-2xl font-bold mb-4">Dark Poetries here...</h2>
@@ -409,6 +482,92 @@ footer a div:hover {
             </div>
         </div>
     </footer>
+                  <script>
+  // Sample post data - replace with your actual posts
+  const posts = [
+    {
+      id: 1,
+      title: "A woman in love",
+      subtitle: "I can't fight with a woman in love, I accept my defeat",
+      imageUrl: "A-woman-in-love.jpg",
+      url: "A-woman-in-love.html" // Add the URL for each article
+    },
+    {
+      id: 2,
+      title: "Shh.. They're elders",
+      subtitle: "Would you let your elders hurt anybody just because they're elders?",
+      imageUrl: "Shh-elders",
+      url: "Shh-elders.html"
+    },
+    {
+      id: 3,
+      title: "JavaScript Best Practices",
+      subtitle: "Write cleaner, more maintainable JavaScript code",
+      imageUrl: "https://via.placeholder.com/300x200",
+      url: "/articles/javascript-best-practices"
+    },
+    {
+      id: 4,
+      title: "Responsive Design Techniques",
+      subtitle: "Create websites that look great on any device",
+      imageUrl: "https://via.placeholder.com/300x200",
+      url: "/articles/responsive-design-techniques"
+    }
+  ];
+  
+  // Function to render posts
+  function renderPosts() {
+    const container = document.querySelector('.posts-container');
+    
+    posts.forEach((post, index) => {
+      const postElement = document.createElement('div');
+      postElement.className = 'post-item';
+      
+      // Create the link wrapper that will make the whole post clickable
+      const linkElement = document.createElement('a');
+      linkElement.className = 'post-link';
+      linkElement.href = post.url; // Set the URL to the full article
+      
+      // Create image section
+      const imageSection = document.createElement('div');
+      imageSection.className = 'post-image';
+      const img = document.createElement('img');
+      img.src = post.imageUrl;
+      img.alt = post.title;
+      imageSection.appendChild(img);
+      
+      // Create content section
+      const contentSection = document.createElement('div');
+      contentSection.className = 'post-content';
+      const title = document.createElement('h2');
+      title.className = 'post-title';
+      title.textContent = post.title;
+      const subtitle = document.createElement('p');
+      subtitle.className = 'post-subtitle';
+      subtitle.textContent = post.subtitle;
+      contentSection.appendChild(title);
+      contentSection.appendChild(subtitle);
+      
+      // Alternate image position based on index
+      if (index % 2 === 0) {
+        linkElement.appendChild(imageSection);
+        linkElement.appendChild(contentSection);
+      } else {
+        linkElement.appendChild(contentSection);
+        linkElement.appendChild(imageSection);
+      }
+      
+      // Add the link to the post item
+      postElement.appendChild(linkElement);
+      
+      // Add the post item to the container
+      container.appendChild(postElement);
+    });
+  }
+  
+  // Call the function when the page loads
+  window.addEventListener('DOMContentLoaded', renderPosts);
+</script>
 
     <!-- Script to toggle mobile menu -->
     <script>
