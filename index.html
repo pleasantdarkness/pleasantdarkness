@@ -82,14 +82,74 @@
     }
   }
   
+  .posts-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .post-item {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .post-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-link {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    align-items: center; /* Center items vertically */
+  }
+  
   .post-image {
-    width: 30%;
+    width: 120px; /* Fixed width for the image container */
+    min-width: 120px; /* Prevent shrinking */
+    height: 120px; /* Fixed height to make it square */
   }
   
   .post-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* This makes the image cover the container without distortion */
     border-radius: 6px;
+  }
+  
+  .post-content {
+    flex: 1; /* Take up remaining space */
+    padding: 0 15px;
+  }
+  
+  .post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .post-subtitle {
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .post-link {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .post-image {
+      margin-bottom: 15px;
+    }
   }
   
   .post-content {
@@ -496,8 +556,8 @@ footer a div:hover {
       id: 2,
       title: "Shh.. They're elders",
       subtitle: "Would you let your elders hurt anybody just because they're elders?",
-      imageUrl: "Shh-elders",
-      url: "Shh-elders.html"
+      imageUrl: "Shh-elders.jpg",
+      url: "shh-elders.html"
     },
     {
       id: 3,
