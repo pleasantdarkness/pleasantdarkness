@@ -1,3 +1,326 @@
+/* Enhanced Posts Container */
+.posts-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Post Item Styling with Enhanced Hover Effects */
+.post-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: #9dc9ff;
+  background-color: rgba(250, 250, 250, 0.9);
+}
+
+/* Sparkling border effect */
+.post-item::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 14px;
+  background: linear-gradient(45deg, 
+    transparent, transparent, 
+    #ff7e5f, #feb47b, 
+    #2196F3, #00bcd4);
+  background-size: 400% 400%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.post-item:hover::before {
+  opacity: 1;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+/* Post Link Styling */
+.post-link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+/* Post Image Styling */
+.post-image {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.post-item:hover .post-image img {
+  transform: scale(1.05);
+}
+
+/* Category Tag */
+.post-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+/* Post Content Styling */
+.post-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0;
+}
+
+/* Post Title with Sparkling Effect */
+.post-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  line-height: 1.3;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.post-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #2196F3, #00bcd4);
+  transition: width 0.4s ease;
+}
+
+.post-item:hover .post-title {
+  background: linear-gradient(90deg, #2196F3, #00bcd4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(33, 150, 243, 0.1), 0 0 10px rgba(33, 150, 243, 0.1);
+  animation: titleSparkle 2s infinite;
+}
+
+.post-item:hover .post-title::after {
+  width: 100%;
+}
+
+/* Post Subtitle */
+.post-subtitle {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+/* Post Footer */
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.post-meta {
+  font-size: 13px;
+  color: #888;
+}
+
+.post-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.post-action {
+  color: #666;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.post-action:hover {
+  color: #2196F3;
+}
+
+/* Read More Button */
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  color: #2196F3;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.read-more::after {
+  content: "→";
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.read-more:hover::after {
+  transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes sparkle {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes titleSparkle {
+  0% {
+    text-shadow: 0 0 5px rgba(33, 150, 243, 0.1), 0 0 10px rgba(33, 150, 243, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(33, 150, 243, 0.3), 0 0 20px rgba(33, 150, 243, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(33, 150, 243, 0.1), 0 0 10px rgba(33, 150, 243, 0.1);
+  }
+}
+
+/* Progress Bar for Reading */
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background: #f0f0f0;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #2196F3, #00bcd4);
+  border-radius: 2px;
+  width: 70%;
+}
+
+/* Fade-in Animation for Posts */
+.post-item {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 960px) {
+  .posts-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .posts-container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+  
+  .post-item {
+    margin-bottom: 20px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .post-item {
+    background: #2a2a2a;
+    border-color: #3a3a3a;
+  }
+  
+  .post-item:hover {
+    background-color: #333;
+    border-color: #4a4a4a;
+  }
+  
+  .post-title {
+    color: #fff;
+  }
+  
+  .post-subtitle {
+    color: #bbb;
+  }
+  
+  .post-footer {
+    border-top-color: #3a3a3a;
+  }
+  
+  .post-meta {
+    color: #999;
+  }
+  
+  .post-action {
+    color: #aaa;
+  }
+  
+  .progress-container {
+    background: #3a3a3a;
+  }
+}
+
+
+
+
+
 .card {
     display: flex;
     flex-direction: column;
