@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Shh.. They're elders",
+        "subtitle": "Does being elder allows you to hurt you younger ones?",
+        "image": "Shh-elders.jpg",
+        "link": "shh-elders.html",
+        "categories": ["Poetry", "Darkness"],
+        "views": 150
+    },
+    {
+        "title": "A woman in love",
+        "subtitle": "I can't fight with a woman in love, I accept my defeat",
+        "image": "A-woman-in-love",
+        "link": "A-woman-in-love.html",
+        "categories": ["Journal", "Reflections","confessions"],
+        "views": 300
+    }
+]
