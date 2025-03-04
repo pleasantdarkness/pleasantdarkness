@@ -247,6 +247,60 @@
         </form>
     </div>
 
+              <div class="posts-container">
+    <a href="https://pleasantdarkness.com/shh-elders.html" class="post-link">
+      <div class="post-block">
+        <div class="post-image" style="background-image: url('Shh-elders.jpg');"></div>
+        <div class="post-content">
+          <h2 class="post-title">Shh.. They're elders</h2>
+          <p class="post-summary">Does being elder gives you right to do anything to your younger?</p>
+          <div class="post-actions">
+            <span class="read-more">Read More</span>
+            <button class="share-button" onclick="event.stopPropagation();">Share</button>
+          </div>
+        </div>
+      </div>
+    </a>
+    
+    <a href="#poem2" class="post-link">
+      <div class="post-block">
+        <div class="post-image" style="background-image: url('/api/placeholder/200/200');"></div>
+        <div class="post-content">
+          <h2 class="post-title">Midnight Reflections</h2>
+          <p class="post-summary">Contemplations on solitude and the beauty found in darkness.</p>
+          <div class="post-actions">
+            <span class="read-more">Read More</span>
+            <button class="share-button" onclick="event.stopPropagation();">Share</button>
+          </div>
+        </div>
+      </div>
+    </a>
+    
+    <a href="#article1" class="post-link">
+      <div class="post-block">
+        <div class="post-image" style="background-image: url('/api/placeholder/200/200');"></div>
+        <div class="post-content">
+          <h2 class="post-title">Echoes of Silence</h2>
+          <p class="post-summary">When words fail, silence speaks volumes in this exploration of the unsaid.</p>
+          <div class="post-actions">
+            <span class="read-more">Read More</span>
+            <button class="share-button" onclick="event.stopPropagation();">Share</button>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <script>
+    // Simple share button functionality
+    document.querySelectorAll('.share-button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        alert('Share functionality would open here');
+      });
+    });
+  </script>
             
         <!-- Card Section -->
 <section class="my-8">
