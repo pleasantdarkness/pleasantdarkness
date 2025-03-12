@@ -62,8 +62,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
-            background-color: #C5C6C7 !important; /* copper rose */
-            color: #000 !important; /* White text */
+           background-color: #000000 !important;
+    background-image: url('poetrybg.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    color: #EDE4C5 !important; /* White text */
         }
         Header {
             background-attachment: fixed 
@@ -89,6 +94,9 @@ footer a div:hover {
     text-shadow: 0 0 12px rgba(255, 223, 0, 0.8); /* Bright gold glow on hover */
 }
          
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
 
     </style>
 </head>
@@ -133,7 +141,7 @@ footer a div:hover {
                   ></div>
                 </div>
               </div>
-              <p class="text-[#000] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              <p class="text-gray-300 text-base font-normal leading-normal pb-3 pt-1 px-4 bg-black/20 rounded-md text-shadow">
                <br>
                 Shh.. they are elders<br>
         
