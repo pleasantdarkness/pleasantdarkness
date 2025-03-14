@@ -53,13 +53,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
-           background-color: #000000 !important;
+body {
+    background-color: #000000 !important;
     background-image: url('poetrybg.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-attachment: fixed; /* Keeps the background fixed when scrolling */
-    color: #EDE4C5 !important; /* White text */
+    background-position: center;
+    background-attachment: fixed;
+    color: #EDE4C5 !important;
+}
+
+/* Adjust for larger screens */
+@media (min-width: 1024px) {
+    body {
+        background-size: contain;  /* Ensures the whole image is visible */
+        background-position: top center;  /* Moves image to a better position */
+    }
+}
+
 }
 
         Header {
