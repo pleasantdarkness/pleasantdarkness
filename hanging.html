@@ -58,17 +58,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: bottom;
     color: #EDE4C5 !important;
 }
-
-/* Adjust for larger screens */
-@media (min-width: 1024px) {
-    body {
-        background-size: contain;  /* Ensures the whole image is visible */
-        background-position: top center;  /* Moves image to a better position */
-    }
-    
         Header {
             background-attachment: fixed 
         }
@@ -121,7 +113,6 @@ footer a div:hover {
             <li><a href="journal.html" class="block text-sm hover:text-gray-500">Journal</a></li>
         </ul>
     </div>
-
     <!-- Hero Section -->
     <header class="relative bg-cover bg-center h-[50vh] flex items-center justify-center text-center text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bgpic3.jpg');">
         <h1 class="text-3xl md:text-5xl font-bold">Is once a cheater always a cheater?</h1>
